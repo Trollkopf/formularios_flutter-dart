@@ -77,7 +77,7 @@ class MyHomePage extends StatelessWidget {
                     foregroundColor: Colors.deepPurple,
                     elevation: 8,
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
-                child: const Text('Ir al switches')),
+                child: const Text('Ir a selecciones')),
           ],
         ),
       ),

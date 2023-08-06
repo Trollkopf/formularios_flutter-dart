@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
         '/cupertinodate': (BuildContext context) =>
             const CupertinoDatepicker(title: 'Calendario Cupertino'),
         '/switches': (BuildContext context) =>
-            const Switches(title: 'Switches'),
+            const Switches(title: 'Selecciones'),
       },
     );
   }
