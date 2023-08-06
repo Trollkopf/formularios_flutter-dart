@@ -42,7 +42,7 @@ class _Formulario extends State<Formulario> {
               ),
               const Divider(),
               const Padding(padding: EdgeInsets.only(bottom: 20)),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.7,
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: Column(

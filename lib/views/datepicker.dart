@@ -10,8 +10,8 @@ class Calendario extends StatefulWidget {
 }
 
 class _Calendario extends State<Calendario> {
-  var _date = null;
-  var _hour = null;
+  var _date;
+  var _hour;
 
   final TextStyle _textStyleDefault = const TextStyle(color: Colors.black);
   final TextStyle _textStyleSassie = const TextStyle(
@@ -62,7 +62,7 @@ class _Calendario extends State<Calendario> {
                 foregroundColor: Colors.white,
                 elevation: 8,
               ),
-              child: Text('Abrir un datepicker'),
+              child: const Text('Abrir un datepicker'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -73,7 +73,7 @@ class _Calendario extends State<Calendario> {
                 foregroundColor: Colors.white,
                 elevation: 8,
               ),
-              child: Text('Abrir un timePicker'),
+              child: const Text('Abrir un timePicker'),
             ),
             const Padding(padding: EdgeInsets.only(bottom: 20)),
             const Text('Esta es la fecha seleccionada:'),

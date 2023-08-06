@@ -11,8 +11,8 @@ class CupertinoDatepicker extends StatefulWidget {
 }
 
 class _CupertinoDatepicker extends State<CupertinoDatepicker> {
-  var _date = null;
-  var _hour = null;
+  var _date;
+  var _hour;
 
   final TextStyle _defaultText = const TextStyle(color: Colors.black);
   final TextStyle _highlightText = const TextStyle(
@@ -35,7 +35,7 @@ class _CupertinoDatepicker extends State<CupertinoDatepicker> {
   Widget _hourPicker() {
     return CupertinoDatePicker(
       mode: CupertinoDatePickerMode.time,
-     minuteInterval: 1,
+      minuteInterval: 1,
       use24hFormat: true,
       initialDateTime: DateTime.now(),
       onDateTimeChanged: (value) {
@@ -61,7 +61,7 @@ class _CupertinoDatepicker extends State<CupertinoDatepicker> {
                   showModalBottomSheet(
                       context: context,
                       builder: (BuildContext context) {
-                        return Container(
+                        return SizedBox(
                           height: MediaQuery.of(context).size.height / 3,
                           child: _datePicker(),
                         );
@@ -78,7 +78,7 @@ class _CupertinoDatepicker extends State<CupertinoDatepicker> {
                   showModalBottomSheet(
                       context: context,
                       builder: (BuildContext context) {
-                        return Container(
+                        return SizedBox(
                           height: MediaQuery.of(context).size.height / 3,
                           child: _hourPicker(),
                         );

@@ -65,7 +65,19 @@ class MyHomePage extends StatelessWidget {
                     foregroundColor: Colors.deepPurple,
                     elevation: 8,
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
-                child: const Text('Ir al calendario cupertino'))
+                child: const Text('Ir al calendario cupertino')),
+            const Padding(padding: EdgeInsets.only(bottom: 10)),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/switches');
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                        Theme.of(context).colorScheme.inversePrimary,
+                    foregroundColor: Colors.deepPurple,
+                    elevation: 8,
+                    shadowColor: Theme.of(context).colorScheme.inversePrimary),
+                child: const Text('Ir al switches')),
           ],
         ),
       ),
