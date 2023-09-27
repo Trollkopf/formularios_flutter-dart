@@ -87,7 +87,7 @@ class _Switches extends State<Switches> {
                     onChanged: (value) {
                       setState(() {
                         _opcionRadio = RadioOpcion.Coche;
-                        _iconRadio = Icon(Icons.directions_car);
+                        _iconRadio = const Icon(Icons.directions_car);
                       });
                     }),
                 Text(
@@ -104,7 +104,7 @@ class _Switches extends State<Switches> {
                     onChanged: (value) {
                       setState(() {
                         _opcionRadio = RadioOpcion.Barco;
-                        _iconRadio = Icon(Icons.directions_boat);
+                        _iconRadio = const Icon(Icons.directions_boat);
                       });
                     }),
                 Text(
@@ -121,7 +121,7 @@ class _Switches extends State<Switches> {
                     onChanged: (value) {
                       setState(() {
                         _opcionRadio = RadioOpcion.Avion;
-                        _iconRadio = Icon(Icons.airplanemode_active);
+                        _iconRadio = const Icon(Icons.airplanemode_active);
                       });
                     }),
                 Text(

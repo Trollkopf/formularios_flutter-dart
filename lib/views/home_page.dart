@@ -78,6 +78,19 @@ class MyHomePage extends StatelessWidget {
                     elevation: 8,
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
                 child: const Text('Ir a selecciones')),
+            const Padding(padding: EdgeInsets.only(bottom: 10)),
+            ElevatedButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, '/checkboxes');
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                    Theme.of(context).colorScheme.inversePrimary,
+                  foregroundColor: Colors.deepPurple,
+                  elevation: 8,
+                    shadowColor: Theme.of(context).colorScheme.inversePrimary
+                ),
+                child: const Text('Checkboxes')),
           ],
         ),
       ),

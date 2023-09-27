@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:formularios/views/cupertinodatepicker.dart';
 import 'package:formularios/views/datepicker.dart';
 import 'package:formularios/views/switches.dart';
+import 'package:formularios/views/checkboxes.dart';
 
 import 'views/formulario.dart';
 import 'views/home_page.dart';
@@ -44,6 +45,8 @@ class MyApp extends StatelessWidget {
             const CupertinoDatepicker(title: 'Calendario Cupertino'),
         '/switches': (BuildContext context) =>
             const Switches(title: 'Selecciones'),
+        '/checkboxes': (BuildContext context) =>
+            const Checkboxes(title: 'Checkbox'),
       },
     );
   }
