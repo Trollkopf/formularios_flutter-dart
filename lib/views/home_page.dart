@@ -28,6 +28,7 @@ class MyHomePage extends StatelessWidget {
                         Theme.of(context).colorScheme.inversePrimary,
                     foregroundColor: Colors.deepPurple,
                     elevation: 8,
+                    fixedSize: const Size.fromWidth(320),
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
                 child: const Text('Ir a la entrada de texto')),
             const Padding(padding: EdgeInsets.only(bottom: 10)),
@@ -40,6 +41,7 @@ class MyHomePage extends StatelessWidget {
                         Theme.of(context).colorScheme.inversePrimary,
                     foregroundColor: Colors.deepPurple,
                     elevation: 8,
+                    fixedSize: const Size.fromWidth(320),
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
                 child: const Text('Ir al Listener')),
             const Padding(padding: EdgeInsets.only(bottom: 10)),
@@ -52,6 +54,7 @@ class MyHomePage extends StatelessWidget {
                         Theme.of(context).colorScheme.inversePrimary,
                     foregroundColor: Colors.deepPurple,
                     elevation: 8,
+                    fixedSize: const Size.fromWidth(320),
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
                 child: const Text('Ir al calendario')),
             const Padding(padding: EdgeInsets.only(bottom: 10)),
@@ -64,6 +67,7 @@ class MyHomePage extends StatelessWidget {
                         Theme.of(context).colorScheme.inversePrimary,
                     foregroundColor: Colors.deepPurple,
                     elevation: 8,
+                    fixedSize: const Size.fromWidth(320),
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
                 child: const Text('Ir al calendario cupertino')),
             const Padding(padding: EdgeInsets.only(bottom: 10)),
@@ -76,21 +80,10 @@ class MyHomePage extends StatelessWidget {
                         Theme.of(context).colorScheme.inversePrimary,
                     foregroundColor: Colors.deepPurple,
                     elevation: 8,
+                    fixedSize: const Size.fromWidth(320),
                     shadowColor: Theme.of(context).colorScheme.inversePrimary),
                 child: const Text('Ir a selecciones')),
             const Padding(padding: EdgeInsets.only(bottom: 10)),
-            ElevatedButton(
-                onPressed: (){
-                  Navigator.pushNamed(context, '/checkboxes');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor:
-                    Theme.of(context).colorScheme.inversePrimary,
-                  foregroundColor: Colors.deepPurple,
-                  elevation: 8,
-                    shadowColor: Theme.of(context).colorScheme.inversePrimary
-                ),
-                child: const Text('Checkboxes')),
           ],
         ),
       ),

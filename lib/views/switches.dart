@@ -12,6 +12,12 @@ class Switches extends StatefulWidget {
 
 enum RadioOpcion { Coche, Avion, Barco }
 
+Map _mapTransporte = {
+  RadioOpcion.Coche: false,
+  RadioOpcion.Avion: false,
+  RadioOpcion.Barco: false,
+};
+
 class _Switches extends State<Switches> {
   bool _opcionSwitch = false;
   bool _opcionCSwitch = false;
@@ -93,9 +99,8 @@ class _Switches extends State<Switches> {
                 Text(
                   'Coche',
                   style: _opcionRadio == RadioOpcion.Coche
-                      ?const TextStyle(
-                          color: Colors.green, fontWeight: FontWeight.bold)
-                      :const TextStyle(),
+                      ? const TextStyle(color: Colors.green)
+                      : const TextStyle(),
                 ),
                 Radio(
                     value: RadioOpcion.Barco,
@@ -110,9 +115,8 @@ class _Switches extends State<Switches> {
                 Text(
                   'Barco',
                   style: _opcionRadio == RadioOpcion.Barco
-                      ?const TextStyle(
-                          color: Colors.green, fontWeight: FontWeight.bold)
-                      :const TextStyle(),
+                      ? const TextStyle(color: Colors.green)
+                      : const TextStyle(),
                 ),
                 Radio(
                     value: RadioOpcion.Avion,
@@ -127,13 +131,87 @@ class _Switches extends State<Switches> {
                 Text(
                   'Avión',
                   style: _opcionRadio == RadioOpcion.Avion
-                      ?const TextStyle(
-                          color: Colors.green, fontWeight: FontWeight.bold)
-                      :const TextStyle(),
+                      ? const TextStyle(color: Colors.green)
+                      : const TextStyle(),
                 ),
               ],
             ),
-            _iconRadio
+            _iconRadio,
+            const Divider(),
+            const Text(
+              'Checkbox',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Coche',
+                  style: _mapTransporte[RadioOpcion.Coche]
+                      ? const TextStyle(color: Colors.green)
+                      : const TextStyle(),
+                ),
+                Checkbox(
+                    activeColor: Colors.green,
+                    value: _mapTransporte[RadioOpcion.Coche],
+                    onChanged: (value) {
+                      setState(() {
+                        _mapTransporte[RadioOpcion.Coche] = value;
+                      });
+                    }),
+                Text(
+                  'Barco',
+                  style: _mapTransporte[RadioOpcion.Barco]
+                      ? const TextStyle(color: Colors.green)
+                      : const TextStyle(),
+                ),
+                Checkbox(
+                    activeColor: Colors.green,
+                    value: _mapTransporte[RadioOpcion.Barco],
+                    onChanged: (value) {
+                      setState(() {
+                        _mapTransporte[RadioOpcion.Barco] = value;
+                      });
+                    }),
+                Text(
+                  'Avión',
+                  style: _mapTransporte[RadioOpcion.Avion]
+                      ? const TextStyle(color: Colors.green)
+                      : const TextStyle(),
+                ),
+                Checkbox(
+                    activeColor: Colors.green,
+                    value: _mapTransporte[RadioOpcion.Avion],
+                    onChanged: (value) {
+                      setState(() {
+                        _mapTransporte[RadioOpcion.Avion] = value;
+                      });
+                    })
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Icon(
+                  Icons.directions_car,
+                  color: _mapTransporte[RadioOpcion.Coche]
+                      ? Colors.green
+                      : Colors.grey,
+                ),
+                Icon(
+                  Icons.directions_boat,
+                  color: _mapTransporte[RadioOpcion.Barco]
+                      ? Colors.green
+                      : Colors.grey,
+                ),
+                Icon(
+                  Icons.airplanemode_active,
+                  color: _mapTransporte[RadioOpcion.Avion]
+                      ? Colors.green
+                      : Colors.grey,
+                ),
+              ],
+            )
           ],
         ),
       ),
