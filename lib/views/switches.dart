@@ -240,7 +240,7 @@ class _Switches extends State<Switches> {
                     color: _opcionSlider < 5 ? Colors.red : Colors.green),
               ),
               SizedBox(
-                width: MediaQuery.of(context).size.width*0.92,
+                width: MediaQuery.of(context).size.width*0.93,
                 child: CupertinoSlider(
                     value: _opcionSlider,
                     activeColor: Colors.green,
